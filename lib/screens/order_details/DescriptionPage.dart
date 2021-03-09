@@ -43,20 +43,24 @@ class _DescriptionPageState extends State<DescriptionPage> {
               padding: EdgeInsetsDirectional.only(
                 start: 0.w, end: 20.w, top: 0.h, bottom: 0.h
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomText(
-                    'workDescription:',
-                    textColor: primaryColor,
-                    primaryFont: PRIMARY_FONT_BOLD,
-                    fontSize: 18,
-                  ),
-                  itemRowOrderProgress()
-                ],
+              child: Container(
+                height: 120.h,
+                width: 1.0.sw,
+                child: Stack(
+                  alignment: AlignmentDirectional.centerStart,
+                  children: [
+                    CustomText(
+                      'workDescription:',
+                      textColor: primaryColor,
+                      primaryFont: PRIMARY_FONT_BOLD,
+                      fontSize: 18,
+                    ),
+                    itemRowOrderProgress()
+                  ],
+                ),
               ),
             ),
-            SizedBox(height: 10.h,),
+            // SizedBox(height: 100.h,),
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,

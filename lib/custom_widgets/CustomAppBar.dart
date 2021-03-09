@@ -158,6 +158,6 @@ class _CustomAppBarState extends State<CustomAppBar> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    widget.tabController.dispose();
+    // widget.tabController.dispose();
   }
 }
